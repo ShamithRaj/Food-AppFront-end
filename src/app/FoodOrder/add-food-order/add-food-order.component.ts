@@ -21,7 +21,7 @@ export class AddFoodOrderComponent implements OnInit {
     this.order1.addData(this.order).subscribe((data)=>{
       this.result=data
       console.log(this.result)
-      window.alert("Food Ordere has been Saved")
+      window.alert("Food Order has been Saved")
       
     })
   }

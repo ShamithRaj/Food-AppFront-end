@@ -39,7 +39,6 @@ export class EmailBillComponent implements OnInit {
     this.bills.generateBill(this.bill.id,this.bill).subscribe((res)=>{
       this.message=res
       console.log(this.message); 
-      this.root.navigate(['orders'])
     })
   }
 

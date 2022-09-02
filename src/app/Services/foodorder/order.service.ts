@@ -11,7 +11,7 @@ export class OrderService {
 
   constructor(private http: HttpClient) { }
   addData(order: any) {
-    return this.http.post("http://localhost:8080/orders", order);
+    return this.http.post("http://localhost:8080/saveorders", order);
   }
   getData() {
     return this.http.get("http://localhost:8080/orders");
@@ -23,7 +23,7 @@ export class OrderService {
     return localStorage.getItem('registeredRole')
   }
   updateorders(id:any,order:any){
-    return this.http.put(`http://localhost:8080/updateorders/${id}`,order)
+    return this.http.post(`http://localhost:8080/updateorders/${id}`,order)
   }
   isorders() {
     if ((this.isregisteredStaff() != 'undefined' && ((this.isregisteredStaff() == 'Staff') || (this.isregisteredStaff() == 'Manager') || (this.isregisteredStaff() == 'Admin')))) {

@@ -6,5 +6,5 @@ export class Items {
     type!:string
     quantity!:string
     price!:string
-    orders = new FoodOrder()
+    foodorder = new FoodOrder()
 }

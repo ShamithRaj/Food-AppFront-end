@@ -21,8 +21,7 @@ export class AddProductComponent implements OnInit {
     this.product.addData(this.products).subscribe((data)=>{
       this.result=data
       console.log(this.result)
-      window.alert("New Product added successfully")
-      this.route.navigate(['products'])
+      window.alert("Product has been Added")
     })
   }
 

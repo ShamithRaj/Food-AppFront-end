@@ -1,14 +1,13 @@
 
-<table class="table table-dark">
+<table class="table">
     <thead>
       <tr>
-        <th scope="col">ID</th>
+        <th scope="col">Id</th>
         <th scope="col">Name</th>
         <th scope="col">Type</th>
         <th scope="col">Quantity</th>
         <th scope="col">Price</th>
-        <th scope="col">Order ID</th>
-        <th scope="col">Staff ID</th>
+        <th scope="col">Order Id</th>
         <th scope="col">Update</th>
         <th scope="col">Delete</th>
         
@@ -21,8 +20,7 @@
         <td>{{r.type}}</td>
         <td>{{r.quantity}}</td>
         <td>{{r.price}}</td>
-        <td>{{r.orders.id}}</td>
-        <td>{{r.orders.staff.id}}</td>
+        <td>{{r.foodorder.id}}</td>
         <td><button type="button" class="btn btn-primary" [routerLink]="['/edititem/',r.id]" [disabled]="loginstaffID!=r.orders.staff.id">Update</button></td>
         <td><button type="button" class="btn btn-primary" (click)="delete(r.id)" [disabled]="loginstaffID!=r.orders.staff.id">Delete</button></td>
       </tr>

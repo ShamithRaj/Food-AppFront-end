@@ -12,31 +12,31 @@ import { Staff } from '../class/staff';
 })
 export class StaffLoginComponent implements OnInit {
 
-  constructor(private staff:StaffService,private route:Router) { }
-  result:any
-  registeredRole:any
+  constructor(private staff: StaffService, private route: Router) { }
+  result: any
+
   admin = new Admin()
-  requiredRoleStaff='Staff'
-  loginsatffID:any
+  requiredRoleStaff = 'Staff'
+  Id: any
+  Role: any
   ngOnInit(): void {
-    localStorage.setItem('requiredRoleStaff',this.requiredRoleStaff)
+    localStorage.setItem('requiredRoleStaff', this.requiredRoleStaff)
   }
 
-  loginStaff(form:NgForm){
-    this.staff.getstaff(this.admin).subscribe((res)=>{
-      this.result=res
+  loginStaff(form: NgForm) {
+    this.staff.getstaff(this.admin).subscribe((res) => {
+      this.result = res
       console.log(this.result);
-      
-      this.registeredRole=this.result.role
-      this.loginsatffID=this.result.id
-      localStorage.setItem('loginstaffID',this.loginsatffID)
-      localStorage.setItem('registeredRole',this.registeredRole)
-      window.alert("Logged in as Staff")
-      },error=>{  
+
+      this.Role = this.result.role
+      this.Id = this.result.id
+      localStorage.setItem('loginstaffID', this.Id)
+      localStorage.setItem('registeredRole', this.Role)
+      window.alert("Staff has been logged in")
+    }, error => {
       alert("Invalid Details")
-      })
-      this.route.navigate(['home'])
-    
+    })
+
   }
 
 }

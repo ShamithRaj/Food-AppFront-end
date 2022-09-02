@@ -10,13 +10,13 @@ export class BranchmanagerService {
 
   constructor(private http: HttpClient) { }
   addData(admin: any) {
-    return this.http.post("http://localhost:8080/savemanager", admin);
+    return this.http.post("http://localhost:8080/manager", admin);
   }
   getData() {
-    return this.http.get("http://localhost:8080/getallmanagers");
+    return this.http.get("http://localhost:8080/manager");
   }
   deleteData(id: any) {
-    return this.http.delete(`http://localhost:8080/deletemanager/${id}`);
+    return this.http.delete(`http://localhost:8080/manager/${id}`);
   }
   loginData(manager: any) {
     return this.http.post("http://localhost:8080/getbymanager", manager);
@@ -26,7 +26,6 @@ export class BranchmanagerService {
     return this.http.post("http://localhost:8080/getbymanager", admin)
   }
   isLoggedIn() {
-    //logic
     if (localStorage.getItem('rmanagerPassword') == localStorage.getItem('managerPassword')
       && localStorage.getItem('rmanagerEmail') == localStorage.getItem('managerEmail')) {
       return true;
@@ -35,7 +34,7 @@ export class BranchmanagerService {
       return false;
     }
   }
-  public regManager(admin:Admin):Observable<object>{
-    return this.http.post("http://localhost:8080/savemanager",admin)
+  public addManager(admin:Admin):Observable<object>{
+    return this.http.post("http://localhost:8080/manager",admin)
   }
 }

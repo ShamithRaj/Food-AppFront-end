@@ -19,7 +19,7 @@ export class AddBranchManagerComponent implements OnInit {
   }
 
   addManager(form:NgForm){
-    this.branchService.regManager(this.manager).subscribe((res)=>{
+    this.branchService.addManager(this.manager).subscribe((res)=>{
       this.result=res
       console.log(this.result);
       window.alert("Manager has been added")

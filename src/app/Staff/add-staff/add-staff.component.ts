@@ -12,7 +12,7 @@ import { StaffService } from 'src/app/Services/Staff/staff.service';
 export class AddStaffComponent implements OnInit {
   admin= new Admin()
   result:any
-  constructor(private register:StaffService, private route:Router) { }
+  constructor(private register:StaffService) { }
 
   ngOnInit(): void {
   }
@@ -21,8 +21,7 @@ export class AddStaffComponent implements OnInit {
       this.register.addData(this.admin).subscribe((res)=>{
         this.result=res
         console.log(this.result)
-        window.alert("Successfully Registered as Staff")
-        this.route.navigate(['staff'])
+        window.alert("Staff has been Added")
         
     })
   }

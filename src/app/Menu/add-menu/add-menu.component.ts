@@ -21,8 +21,7 @@ export class AddMenuComponent implements OnInit {
     this.menu1.putdata(this.menu).subscribe((res)=>{
       this.result=res
       console.log(this.result);
-      window.alert("New Menu added Successfully")
-      this.route.navigate(['menu']) 
+      window.alert("Menu has been Added")
     })
   }
 

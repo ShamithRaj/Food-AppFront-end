@@ -21,7 +21,7 @@ export class ProductService {
     return localStorage.getItem('registeredRole')
   }
   updateproducts(id:any, product:any){
-    return this.http.put(`http://localhost:8080/editproducts/${id}`,product)
+    return this.http.put(`http://localhost:8080/updateproducts/${id}`,product)
   }
   isproducts() {
     if ((this.isregisteredStaff() != 'undefined' && ((this.isregisteredStaff() == 'Staff') || (this.isregisteredStaff() == 'Manager') || (this.isregisteredStaff() == 'Admin')))) {

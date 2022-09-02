@@ -8,7 +8,7 @@ export class ItemService {
 
   constructor(private http: HttpClient) { }
   addData(item: any) {
-    return this.http.post("http://localhost:8080/items", item);
+    return this.http.post("http://localhost:8080/saveitems", item);
 
   }
   getData() {
@@ -18,7 +18,7 @@ export class ItemService {
     return this.http.delete(`http://localhost:8080/deleteitems/${id}`);
   }
   updateitems(id: any, item: any) {
-    return this.http.put(`http://localhost:8080/edititems/${id}`, item)
+    return this.http.post(`http://localhost:8080/updateitems/${id}`, item)
   }
   isitems() {
     if ((this.isregisteredStaff() != 'undefined' && ((this.isregisteredStaff() == 'Staff') || (this.isregisteredStaff() == 'Manager') || (this.isregisteredStaff() == 'Admin')))) {

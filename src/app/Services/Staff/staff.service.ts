@@ -9,7 +9,7 @@ import { Admin } from 'src/app/Admin/class/admin';
 export class StaffService {
   constructor(private http:HttpClient) { }
   public addData(admin:Admin):Observable<object>{
-    return this.http.post("http://localhost:8080/savesatff",admin)
+    return this.http.post("http://localhost:8080/staff",admin)
   }
   getData(){
   return this.http.get("http://localhost:8080/getallstaff");

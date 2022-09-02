@@ -10,7 +10,7 @@ export class BillService {
 
 
   generateBill(id:any,user:any){
-    return this.http.post(`http://localhost:8080/mail/${id}`,user)
+    return this.http.get(`http://localhost:8080/mail/${id}`,user)
 
   }
 }

@@ -35,7 +35,6 @@ export class EditFoodOrderComponent implements OnInit {
     this.order.updateorders(this.orders.id,this.orders).subscribe((res)=>{
       console.log(res);
       window.alert("Updated Successfully")
-      this.root.navigate(['orders'])
       
     })
   }

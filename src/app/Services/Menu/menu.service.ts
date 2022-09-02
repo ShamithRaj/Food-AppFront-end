@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class MenuService {
   constructor(private http:HttpClient) { }
   getdata(){
-    return this.http.get("http://localhost:8080/menu")
+    return this.http.get("http://localhost:8080/getallmenu")
   }
 
   putdata(menu:any){
@@ -28,7 +28,7 @@ export class MenuService {
     }
   }
   updateMenu(id:any, menu:any){
-    return this.http.put(`http://localhost:8080/editmenu/${id}`,menu)
+    return this.http.post(`http://localhost:8080/updatemenu/${id}`,menu)
   }
 
 }
