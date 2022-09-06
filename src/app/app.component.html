@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Food App</a>
+  <a class="navbar-brand" href="#" >Food App</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     
   </button>
@@ -32,6 +32,13 @@
         </div>
       </li>
       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Menu</a>
+        <div class="dropdown-menu">
+          <a routerLink="add-menu" class="nav-link" href="#">Save Menu</a>
+          <a routerLink="menu-details" class="nav-link" href="#">Menu details</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Food Order</a>
         <div class="dropdown-menu">
           <a routerLink="add-order" class="nav-link" href="#">Save Food Order</a>
@@ -45,13 +52,7 @@
           <a routerLink="product-details" class="nav-link" href="#">Product details</a>
         </div>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Menu</a>
-        <div class="dropdown-menu">
-          <a routerLink="add-menu" class="nav-link" href="#">Save Menu</a>
-          <a routerLink="menu-details" class="nav-link" href="#">Menu details</a>
-        </div>
-      </li>
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Item</a>
         <div class="dropdown-menu">
@@ -62,7 +63,7 @@
       <button type="button" (click)="logout()">Logout</button>
     
     </ul>
-   
   </div>
 </nav>
 <router-outlet></router-outlet>
+<img src="https://images7.alphacoders.com/110/1103153.jpg" alt="Card image" width="100%" height="100%">

@@ -21,8 +21,8 @@
         <td>{{r.quantity}}</td>
         <td>{{r.price}}</td>
         <td>{{r.foodorder.id}}</td>
-        <td><button type="button" class="btn btn-primary" [routerLink]="['/edititem/',r.id]" [disabled]="loginstaffID!=r.orders.staff.id">Update</button></td>
-        <td><button type="button" class="btn btn-primary" (click)="delete(r.id)" [disabled]="loginstaffID!=r.orders.staff.id">Delete</button></td>
+        <td><button type="button" class="btn btn-primary" [routerLink]="['/edititem/',r.id]" >Update</button></td>
+        <td><button type="button" class="btn btn-primary" (click)="delete(r.id)" >Delete</button></td>
       </tr>
     </tbody>
   </table>

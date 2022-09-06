@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddAdminComponent } from './Admin/add-admin/add-admin.component';
 import { AdminDetailsComponent } from '../../../Food_App/src/app/trash/admin-details/admin-details.component';
 import { EditAdminComponent } from '../../../Food_App/src/app/trash/edit-admin/edit-admin.component';
-import { AuthGuard } from './Admin/guard/auth.guard';
 import { LoginAdminComponent } from './Admin/login-admin/login-admin.component';
 import { AddBranchComponent } from './Branch/add-branch/add-branch.component';
 import { BranchDetailsComponent } from './Branch/branch-details/branch-details.component';

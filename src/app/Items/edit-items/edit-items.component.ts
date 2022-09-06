@@ -34,7 +34,6 @@ export class EditItemsComponent implements OnInit {
     this.item.updateitems(this.items.id,this.items).subscribe((res)=>{
       console.log(res);
       window.alert("Updated Successfully")
-      this.root.navigate(['items'])
       
     })
   }
